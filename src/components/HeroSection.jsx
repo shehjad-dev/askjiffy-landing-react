@@ -2,25 +2,25 @@ import React from "react";
 
 const HeroSection = () => {
     return (
-        <div className="max-w-7xl mx-auto py-24 flex gap-4 items-center justify-around pt-[200px]">
-            <div className="flex flex-col gap-y-4">
-                <h1 className="text-4xl font-bold">
+        <div className="max-w-7xl mx-auto py-24 flex md:flex-row flex-col-reverse gap-4 items-center justify-around md:pt-[200px] pt-[120px] sm:pb-[8rem] pb-[70px]">
+            <div className="flex flex-col md:gap-y-4 gap-y-2 sm:px-0 px-5">
+                <h1 className="md:text-6xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-primary">
                     Data Democratization in a Jiffy
                 </h1>
-                <p className="text-xl w-[300px] mb-4">
+                <p className="md:text-xl text-lg w-[300px] mb-4 font-montSerrat text-primary">
                     Fast-track your organisation's data democratisation. Get
-                    Jiffy, your personalised AI-ML insights bot, today.
+                    Jiffy, your personalised AI insights bot, today.
                 </p>
-                <div className="flex gap-3">
-                    <a className="bg-white text-blue-900 border-[2.6px] border-blue-900 text-xl font-medium px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-900 hover:bg-opacity-100 hover:text-white transition-all ease-in duration-100">
+                <div className="flex sm:gap-6 gap-3 font-roboto">
+                    <a className="bg-accentOne text-primary border-[2.6px] border-primary sm:text-xl text-lg md:font-medium xs:px-4 xs:py-2 px-2 py-2 rounded-md cursor-pointer hover:bg-primary hover:bg-opacity-100 hover:text-white transition-all ease-in duration-100">
                         How it works
                     </a>
-                    <a className="bg-blue-600 text-white  border-[2.6px] border-blue-600 text-xl font-medium px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-900 hover:bg-opacity-100 transition-all ease-in duration-100">
+                    <a className="bg-primary text-white  border-[2.6px] border-primary text-xl md:font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-secondary hover:border-secondary hover:bg-opacity-100 transition-all ease-in duration-100">
                         Book a Demo
                     </a>
                 </div>
             </div>
-            <div className="w-[350px] h-[290px] border-4 border-black flex items-center justify-center">
+            <div className="w-[330px] h-[290px] border-4 border-primary flex items-center justify-center bg-accentOne rounded-sm">
                 <p>Video</p>
             </div>
         </div>
