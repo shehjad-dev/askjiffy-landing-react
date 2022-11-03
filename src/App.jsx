@@ -2,6 +2,11 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ClientsSections from "./components/ClientsSections";
+import WhyLoveSection from "./components/WhyLoveSection";
+import WhyBestSection from "./components/WhyBestSection";
+import FeatureSection from "./components/FeatureSection";
+import ReqDemoSection from "./components/ReqDemoSection";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -12,22 +17,14 @@ function App() {
             <Navbar />
             <HeroSection />
             <ClientsSections />
+            <WhyLoveSection />
+            <WhyBestSection />
+            <FeatureSection />
+            <ReqDemoSection />
+            <Footer />
             {/* <div className="">
                 <Navbar />
             </div> */}
-
-            <h1 className="text-3xl font-bold underline bg-purple-50 mb-[700px]">
-                Hello world!
-            </h1>
-            <h1 className="text-3xl font-bold underline bg-purple-50">
-                Hello world!
-            </h1>
-            <h1 className="text-3xl font-bold underline bg-purple-50">
-                Hello world!
-            </h1>
-            <h1 className="text-3xl font-bold underline bg-purple-50">
-                Hello world!
-            </h1>
         </div>
     );
 }

@@ -8,8 +8,8 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
     return (
-        <div className=" border-b-2 border-primary border-opacity-30 w-full fixed bg-white">
-            <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full md:px-0 px-4 z-10">
+        <div className=" border-b-2 border-primary border-opacity-30 w-full fixed bg-white z-50">
+            <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full md:px-0 px-4 z-50">
                 <a>
                     <img
                         src={AskJiffyLogo}
@@ -53,7 +53,7 @@ const Navbar = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            strokeWidth={1.5}
+                            strokeWidth={2}
                             stroke="currentColor"
                             className="w-6 h-6"
                         >
@@ -68,6 +68,21 @@ const Navbar = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            className="w-6 h-6"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+                            />
+                        </svg>
+                    )}
+                    {/* <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
                             strokeWidth={2.0}
                             stroke="currentColor"
                             className="w-6 h-6"
@@ -77,12 +92,11 @@ const Navbar = () => {
                                 strokeLinejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                             />
-                        </svg>
-                    )}
+                        </svg> */}
                 </a>
             </nav>
             {isOpen ? (
-                <div className="md:hidden block animate-fade-in-down z-0 font-montSerrat">
+                <div className="md:hidden block animate-fade-in-down z-20 font-montSerrat">
                     <ul className="flex flex-col gap-y-6 items-center text-lg pb-8">
                         <li>
                             <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
