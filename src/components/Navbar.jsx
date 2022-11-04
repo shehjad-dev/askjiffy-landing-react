@@ -7,10 +7,15 @@ const Navbar = () => {
     const handleMenuClick = () => {
         setIsOpen(!isOpen);
     };
+
+    const closeMenuOnNavClick = () => {
+        setIsOpen(false);
+    };
+
     return (
         <div className=" border-b-2 border-primary border-opacity-30 w-full fixed bg-white z-50">
             <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full md:px-0 px-4 z-50">
-                <a>
+                <a href="/">
                     <img
                         src={AskJiffyLogo}
                         alt="Ask Jiffy Main Logo"
@@ -20,28 +25,43 @@ const Navbar = () => {
                 <div className="md:block hidden font-montSerrat">
                     <ul className="flex gap-x-6 items-center text-xl">
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#testimonials"
+                            >
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#usecases"
+                            >
                                 Use Cases
                             </a>
                         </li>
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#whyjiffy"
+                            >
                                 Why Jiffy?
                             </a>
                         </li>
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#features"
+                            >
                                 Features
                             </a>
                         </li>
                     </ul>
                 </div>
-                <a className="bg-secondary text-white text-xl font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-primary hover:bg-opacity-90 transition-all ease-in duration-120 md:block hidden font-roboto">
+                <a
+                    className="bg-secondary text-white text-xl font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-primary hover:bg-opacity-90 transition-all ease-in duration-120 md:block hidden font-roboto"
+                    href="#bookdemo"
+                >
                     Free Demo
                 </a>
                 <a
@@ -99,27 +119,47 @@ const Navbar = () => {
                 <div className="md:hidden block animate-fade-in-down z-20 font-montSerrat">
                     <ul className="flex flex-col gap-y-6 items-center text-lg pb-8">
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#testimonials"
+                                onClick={() => closeMenuOnNavClick()}
+                            >
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#usecases"
+                                onClick={() => closeMenuOnNavClick()}
+                            >
                                 Use Cases
                             </a>
                         </li>
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#whyjiffy"
+                                onClick={() => closeMenuOnNavClick()}
+                            >
                                 Why Jiffy?
                             </a>
                         </li>
                         <li>
-                            <a className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2">
+                            <a
+                                className="cursor-pointer hover:border-b-2 hover:border-primary border-white transition-all ease-in duration-100 pb-1 text-primary px-2"
+                                href="#features"
+                                onClick={() => closeMenuOnNavClick()}
+                            >
                                 Features
                             </a>
                         </li>
                         <li className="w-full px-6 font-roboto">
-                            <a className="bg-secondary text-white text-ld font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-primary hover:bg-opacity-90 transition-all ease-in duration-120 md:hidden block w-full text-center">
+                            <a
+                                className="bg-secondary text-white text-ld font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-primary hover:bg-opacity-90 transition-all ease-in duration-120 md:hidden block w-full text-center"
+                                href="#bookdemo"
+                                onClick={() => closeMenuOnNavClick()}
+                            >
                                 Free Demo
                             </a>
                         </li>

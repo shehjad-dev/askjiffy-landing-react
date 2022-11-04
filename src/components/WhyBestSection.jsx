@@ -11,7 +11,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const WhyBestSection = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-primary scroll-m-4" id="whyjiffy">
             <div className="max-w-7xl mx-auto py-24 sm:pt-[7rem] sm:pb-[4rem] pt-[4rem] pb-[2rem] flex sm:flex-row flex-col gap-4  bg-primary sm:px-16 px-5">
                 <div className="flex flex-col md:gap-y-4 gap-y-2">
                     <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider w-fit text-white">

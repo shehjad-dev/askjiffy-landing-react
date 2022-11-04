@@ -4,8 +4,8 @@ import TestimonialCard from "./TestimonialCard";
 
 const ClientsSections = () => {
     return (
-        <div className="bg-primary">
-            <div className="max-w-7xl mx-auto py-24 sm:pt-[6rem] sm:pb-[6rem] pt-[4rem] pb-[2rem] flex sm:flex-row flex-col gap-4 items-center justify-around bg-primary sm:px-0 px-5">
+        <div className="bg-primary scroll-m-4" id="testimonials">
+            <div className="max-w-7xl mx-auto py-24 sm:pt-[6rem] sm:pb-[2.5rem] pt-[4rem] pb-[1.4rem] flex sm:flex-row flex-col gap-4 items-center justify-around bg-primary sm:px-0 px-5">
                 <div className="flex flex-col md:gap-y-4 gap-y-2">
                     <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-white">
                         Trusted by the biggest in the business
@@ -18,7 +18,7 @@ const ClientsSections = () => {
                     <img src={CocacolaImg} alt="" className="w-[320px]" />
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto sm:py-24 sm:pt-[6rem] sm:pb-[6rem] pt-[6rem] pb-[5rem] flex sm:flex-row flex-col sm:gap-20 gap-[3rem] items-center justify-center bg-primary sm:px-0 px-5">
+            <div className="max-w-7xl mx-auto sm:py-24 sm:pt-[1rem] sm:pb-[6rem] pt-[2.5rem] pb-[5rem] flex sm:flex-row flex-col sm:gap-20 gap-[3rem] items-center justify-center bg-primary sm:px-0 px-5">
                 {/* <TestimonialCard />
                 <TestimonialCard /> */}
                 <div className="bg-secondary text-white flex flex-col gap-y-6 max-w-[360px] sm:h-[200px] h-[220px] justify-between py-6 sm:px-8 px-4 rounded-md border-[2.8px] border-accentTwo">

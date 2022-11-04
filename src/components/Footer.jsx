@@ -1,53 +1,68 @@
 import React, { useState } from "react";
 import AskJiffyLogo from "../assets/AskJiffyLogo.svg";
 import BrandScapesLogo from "../assets/BrandScapesLogo.png";
+import axios from "axios";
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css"; // for React, Vue and Svelte
+
+// Create an instance of Notyf
 
 const Footer = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [org, setOrg] = useState("");
-    const [country, setCountry] = useState("");
+    /* const [country, setCountry] = useState(""); */
     const [msg, setMsg] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(name, email, org, country, msg);
-        /* const data = {
-            Name: name.toString(),
-            Phone: phone.toString(),
-            Email: email.toString(),
-            Date: date,
-            Time: time,
-        };
+    const notyf = new Notyf({
+        duration: 2000,
+        dismissible: true,
+        types: [
+            {
+                type: "error",
+                background: "#dc3545",
+            },
+        ],
+    });
 
-        axios
-            .post(
-                `https://sheetdb.io/api/v1/${API_KEY}
-            `,
-                {
-                    data,
-                }
-            )
-            .then((response) => {
-                //console.log(response.data);
-                setName("");
-                setPhone("");
-                setEmail("");
-                setDate("");
-                setTime("");
-                setForcedTime("");
-                notyf.success("We will contact you soon");
-            })
-            .catch((err) => {
-                //console.log(err);
-                setName("");
-                setPhone("");
-                setEmail("");
-                setDate("");
-                setTime("");
-                setForcedTime("");
-                notyf.error("There was an error!");
-            }); */
+    const handleSubmit = (e) => {
+        //api url = https://sheetdb.io/api/v1/zxw4gs38e46pf
+        e.preventDefault();
+        if ((name !== "", email !== "")) {
+            const formData = {
+                Name: name.toString(),
+                Email: email.toString(),
+                Organization: org.toString(),
+                Message: msg.toString(),
+            };
+
+            axios
+                .post(
+                    `https://sheetdb.io/api/v1/${API_KEY}
+                `,
+                    {
+                        formData,
+                    }
+                )
+                .then((response) => {
+                    //console.log(response.data);
+                    setName("");
+                    setOrg("");
+                    setEmail("");
+                    setMsg("");
+
+                    notyf.success("We will contact you soon");
+                })
+                .catch((err) => {
+                    //console.log(err);
+                    setName("");
+                    setOrg("");
+                    setEmail("");
+                    setMsg("");
+                    notyf.error("There was an error!");
+                });
+        }
+        //console.log(name, email, org, msg);
     };
     return (
         <div className="bg-white">
@@ -93,12 +108,48 @@ const Footer = () => {
                                     />
                                 </svg>
                             </div>
+
                             <div className="text-primary font-montSerrat font-bold sm:text-xl text-base leading-8">
-                                USA - +1 (404) 431-3336 <br />
-                                India - +91-9820695957 <br />
-                                Singapore - +65 8235 1063 <br />
-                                UK - +44 7742 276562 <br />
-                                UAE - +971529596804
+                                USA :{" "}
+                                <a
+                                    href="tel:+1 (404) 431-3336"
+                                    className="hover:text-secondary"
+                                >
+                                    +1 (404) 431-3336
+                                </a>{" "}
+                                <br />
+                                UK :{" "}
+                                <a
+                                    href="tel:+44 7742 276562"
+                                    className="hover:text-secondary"
+                                >
+                                    +44 7742 276562
+                                </a>
+                                <br />
+                                UAE :{" "}
+                                <a
+                                    href="tel:+971529596804"
+                                    className="hover:text-secondary"
+                                >
+                                    +971529596804
+                                </a>{" "}
+                                <br />
+                                India :{" "}
+                                <a
+                                    href="tel:+91-9820695957"
+                                    className="hover:text-secondary"
+                                >
+                                    +91-9820695957
+                                </a>{" "}
+                                <br />
+                                Singapore :{" "}
+                                <a
+                                    href="tel:+65 8235 1063"
+                                    className="hover:text-secondary"
+                                >
+                                    +65 8235 1063
+                                </a>{" "}
+                                <br />
                             </div>
                         </div>
                         <div className="flex gap-4 mt-8 items-center">
@@ -119,15 +170,21 @@ const Footer = () => {
                                 </svg>
                             </div>
                             <div className="text-primary font-montSerrat font-bold sm:text-xl text-base leading-8">
-                                <a href="mailto:jiffy@brand-scapes.com">
+                                <a
+                                    href="mailto:jiffy@brand-scapes.com"
+                                    className="hover:text-secondary"
+                                >
                                     jiffy@brand-scapes.com
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="sm:w-[500px] w-[90vw]">
-                    <form className="bg-primary h-full sm:py-8 sm:px-12 py-6 px-4 rounded-md">
+                <div
+                    className="sm:w-[500px] w-[90vw] scroll-m-20"
+                    id="bookdemo"
+                >
+                    <form className="bg-primary h-full sm:py-8 sm:px-12 py-6 px-4 sm:mx-0 mx-2 rounded-md">
                         <h3 className="text-center font-passionOne text-2xl text-white tracking-widest">
                             Book A Demo
                         </h3>
@@ -179,10 +236,10 @@ const Footer = () => {
                                 placeholder="Organization name"
                                 value={org}
                                 onChange={(e) => setOrg(e.target.value)}
-                                required
+                                /* required */
                             />
                         </div>
-                        <div className="mb-6">
+                        {/* <div className="mb-6">
                             <label
                                 htmlFor="password"
                                 className="block mb-2 sm:text-lg text-base font-medium text-white font-montSerrat"
@@ -198,7 +255,7 @@ const Footer = () => {
                                 onChange={(e) => setCountry(e.target.value)}
                                 required
                             />
-                        </div>
+                        </div> */}
                         <div className="mb-6">
                             <label
                                 htmlFor="password"
@@ -213,7 +270,7 @@ const Footer = () => {
                                 placeholder="Your Message"
                                 value={msg}
                                 onChange={(e) => setMsg(e.target.value)}
-                                required
+                                /* required */
                             />
                         </div>
                         <div className="flex items-center">

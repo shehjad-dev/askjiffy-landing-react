@@ -9,7 +9,10 @@ const ReqDemoSection = () => {
                     <h1 className="sm:text-3xl text-2xl  font-passionOne tracking-wider text-white sm:text-left text-center ">
                         Request a demo to know more
                     </h1>
-                    <a className="bg-primary text-white  border-[2.6px] border-primary text-xl md:font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-secondary hover:border-white hover:bg-opacity-100 transition-all ease-in duration-100 w-fit h-fit">
+                    <a
+                        className="bg-primary text-white  border-[2.6px] border-primary text-xl md:font-medium px-4 py-2 rounded-md cursor-pointer hover:bg-secondary hover:border-white hover:bg-opacity-100 transition-all ease-in duration-100 w-fit h-fit"
+                        href="#bookdemo"
+                    >
                         Book a Demo
                     </a>
                 </div>

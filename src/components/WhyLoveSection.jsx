@@ -6,7 +6,7 @@ import WhyImgFour from "../assets/WhyImgFour.svg";
 
 const WhyLoveSection = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white scroll-m-4" id="usecases">
             <div className="max-w-7xl mx-auto py-24 sm:pt-[6rem] sm:pb-[4rem] pt-[4rem] pb-[2rem] flex sm:flex-row flex-col gap-4 items-center justify-around bg-white sm:px-0 px-5">
                 <div className="flex flex-col md:gap-y-4 gap-y-2">
                     <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-primary">
