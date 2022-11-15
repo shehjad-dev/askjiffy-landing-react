@@ -12,7 +12,10 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const FeatureSection = () => {
     return (
         <div className="bg-white scroll-m-4" id="features">
-            <div className="max-w-7xl mx-auto py-24 sm:pt-[6rem] sm:pb-[6rem] pt-[4rem] pb-[2rem] flex md:flex-row justify-between flex-col gap-4  bg-white sm:px-16 px-5">
+            <div
+                className="max-w-7xl mx-auto py-24 sm:pt-[6rem] sm:pb-[6rem] pt-[4rem] pb-[2rem] flex md:flex-row justify-between flex-col gap-4  bg-white sm:px-16 px-5"
+                id="featuresBox"
+            >
                 <div className="flex flex-col md:gap-y-4 gap-y-2 max-w-[20rem]">
                     <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-primary">
                         Features
@@ -25,7 +28,10 @@ const FeatureSection = () => {
                         efficient decisions for your use case.
                     </p>
                 </div>
-                <div className="md:flex flex-col gap-4 hidden">
+                <div
+                    className="md:flex flex-col gap-4 hidden"
+                    id="featuresBoxOne"
+                >
                     <div className="flex gap-4">
                         <div className="bg-primary p-6 w-[20rem] h-[20rem] flex flex-col gap-6 border-[3px] border-primary rounded-[0.24rem]">
                             <div className="flex gap-3 items-center">

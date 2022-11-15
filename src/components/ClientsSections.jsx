@@ -10,9 +10,9 @@ const ClientsSections = () => {
                     <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-white">
                         Trusted by the biggest in the business
                     </h1>
-                    <p className="md:text-xl text-lg w-[300px] mb-4 font-montSerrat text-white">
+                    {/* <p className="md:text-xl text-lg w-[300px] mb-4 font-montSerrat text-white">
                         Live in over 100 markets globally
-                    </p>
+                    </p> */}
                 </div>
                 <div className="bg-white flex items-center justify-center py-16 px-8 rounded-md border-[2.8px] border-accentTwo">
                     <img src={CocacolaImg} alt="" className="w-[320px]" />

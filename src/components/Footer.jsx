@@ -26,7 +26,6 @@ const Footer = () => {
     });
 
     const handleSubmit = (e) => {
-        //api url = https://sheetdb.io/api/v1/zxw4gs38e46pf
         e.preventDefault();
         if ((name !== "", email !== "")) {
             const formData = {

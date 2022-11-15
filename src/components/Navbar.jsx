@@ -13,8 +13,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className=" border-b-2 border-primary border-opacity-30 w-full fixed bg-white z-50">
-            <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full md:px-0 px-4 z-50">
+        <div className=" border-b-2 border-primary border-opacity-30 fixed w-full bg-white z-50">
+            <nav className="flex justify-between items-center py-3 max-w-7xl w-full  mx-auto md:px-0 px-4 z-50">
                 <a href="/">
                     <img
                         src={AskJiffyLogo}
