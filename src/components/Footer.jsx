@@ -60,6 +60,8 @@ const Footer = () => {
                     setMsg("");
                     notyf.error("There was an error!");
                 });
+        } else {
+            notyf.error("Please fill up the fields");
         }
         //console.log(name, email, org, msg);
     };
@@ -287,7 +289,7 @@ const Footer = () => {
             <div className="bg-primary text-white text-center sm:text-xl text-base font-montSerrat font-bold py-6 px-4">
                 <p>
                     Copyright © 2022 Ask Jiffy. All rights reserved by
-                    Brandscapes Worlwide
+                    Brandscapes Worldwide
                 </p>
             </div>
         </div>

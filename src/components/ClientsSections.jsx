@@ -1,5 +1,6 @@
 import React from "react";
-import CocacolaImg from "../assets/CocacolaImg.png";
+/* import CocacolaImg from "../assets/CocacolaImg.png"; */
+import CocacolaImg from "../assets/cokeImg2.png";
 import TestimonialCard from "./TestimonialCard";
 
 const ClientsSections = () => {
@@ -7,15 +8,21 @@ const ClientsSections = () => {
         <div className="bg-primary scroll-m-4" id="testimonials">
             <div className="max-w-7xl mx-auto py-24 sm:pt-[6rem] sm:pb-[2.5rem] pt-[4rem] pb-[1.4rem] flex sm:flex-row flex-col gap-4 items-center justify-around bg-primary sm:px-0 px-5">
                 <div className="flex flex-col md:gap-y-4 gap-y-2">
-                    <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-white">
+                    {/* <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-white">
                         Trusted by the biggest in the business
+                    </h1> */}
+                    <h1 className="md:text-5xl text-3xl font-passionOne tracking-wider md:w-[600px] w-fit text-white">
+                        Implemented at a Leading Global Beverages Company,
+                        across top 40 markets.
                     </h1>
-                    {/* <p className="md:text-xl text-lg w-[300px] mb-4 font-montSerrat text-white">
-                        Live in over 100 markets globally
-                    </p> */}
                 </div>
-                <div className="bg-white flex items-center justify-center py-16 px-8 rounded-md border-[2.8px] border-accentTwo">
-                    <img src={CocacolaImg} alt="" className="w-[320px]" />
+                <div className="bg-white flex items-center justify-center rounded-md border-[2.8px] border-accentTwo">
+                    {/* <div className="bg-white flex items-center justify-center py-16 px-8 rounded-md border-[2.8px] border-accentTwo"> */}
+                    <img
+                        src={CocacolaImg}
+                        alt=""
+                        className="w-full sm:w-[320px] rounded-md"
+                    />
                 </div>
             </div>
             <div className="max-w-7xl mx-auto sm:py-24 sm:pt-[1rem] sm:pb-[6rem] pt-[2.5rem] pb-[5rem] flex sm:flex-row flex-col sm:gap-20 gap-[3rem] items-center justify-center bg-primary sm:px-0 px-5">
